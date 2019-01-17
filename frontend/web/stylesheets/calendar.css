@@ -1,0 +1,208 @@
+#calendar2 + .filter { padding: 0 13px; }
+#calendar3,
+#calendar2 {
+    width: 100%;
+    font: monospace;
+    line-height: 1.2em;
+    font-size: 15px;
+    text-align: center;
+    height: 350px;
+}
+#calendar3 { }
+#calendar2 thead tr:last-child {
+    font-size: small;
+    color: rgb(85, 85, 85);
+}
+#calendar3 thead tr:nth-child(1) td {
+    color: #fff;
+	font-family: "MontserratExtrabold";
+	font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1) { padding-right: 5px; text-align: right; font-size: 35px; line-height: 30px; color: #8b8b8a; }
+#calendar2 thead tr:nth-child(1) td:nth-child(3) { padding-left: 5px; text-align: left; font-size: 35px; line-height: 30px; color: #8b8b8a; }
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+    color: #fff;
+	font-family: "MontserratExtrabold";
+	font-size: 22px;
+    line-height: 30px;
+    padding-bottom: 20px;
+	padding-top: 10px;
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
+}
+#calendar2 tbody td {
+    color: rgb(44, 86, 122);
+    height: 10px;
+    padding: 10px;
+    position: relative;
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+    color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+    color: #fff;
+}
+#calendar2 tbody td.today span {
+    background: #f48f00;
+    border-radius: 100%;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    display: block;
+    padding: 6px;
+    left: 3px;
+    top: 3px;
+    font-size: 16px;
+}
+#calendar3 tbody td.event {
+    background-color: rgba(244, 143, 0, 0.3); }
+#calendar3 tbody td {
+    border: none;
+    position: relative;
+    width: 14%;
+    height: 64px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+}
+#calendar3 tbody td:hover {
+	background: #F5BD5C;
+	color: #000;
+	cursor: pointer;
+}
+#calendar3 tbody td > span {
+	font-family: "MontserratBold";
+	font-size: 20px;
+}
+#calendar3 tbody td.event {  }
+#calendar3 tbody td.event label {
+    float: left;
+    padding-left: 10px;
+    border-left: 2px solid red;
+    font-size: 14px;
+    text-align: left;
+}
+@media only screen and (max-width : 767px) {
+    #calendar3 tbody td.event .more { min-width: 150px; }
+    #calendar3 tbody td > span { font-size: 14px; }
+    #calendar3 tbody td.event label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-left: 1px solid red;
+        padding-left: 5px;
+        max-width: 45px;
+    }
+}
+#calendar3 tbody td.event .more { display: none;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    box-shadow: 4px 4px 10px #999;
+    box-sizing: border-box;
+    width: 150%;
+    background-color: #ebebeb; }
+#calendar3 tbody td.event .more > * {
+    clear: both;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 5px;
+    margin-bottom: 5px; }
+#calendar3 tbody td.event .more > span { color: #f48f00; }
+#calendar3 tbody td.event .more:hover,
+#calendar3 tbody td.event:hover .more { display: block; }
+#calendar3 tbody tr:first-child td {  }
+#calendar3 tbody tr td:last-child {  }
+
+
+#calendar-events-box {
+	padding: 0px 20px;
+	font-family: "MontserratBold";
+	box-shadow: 0 0 10px rgba(197, 197, 197, 0.5);
+	height: 284px;
+	overflow: scroll;
+}
+.event-item {
+	padding: 25px 0;
+	border-bottom: 1px solid #ccc;
+}
+.event-item:last-child {
+	border-bottom: none;
+}
+.event-date {
+	float: left;
+	padding-top: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	background: #64769F;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+}
+.event-date h1 {
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 5px;
+}
+.event-date span {
+	font-size: 10px;
+}
+.event-title {
+	margin-left: 60px;
+	margin-right: 80px;
+}
+.event-title a {
+	font-family: "MontserratBold";
+	color: #11244E;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 20px;
+}
+.event-title a:hover {
+	color: #F5BD5C;
+	text-decoration: underline;
+}
+.event-time table td,
+.event-time table {
+	padding: 0;
+	margin: 0;
+	//border: 1px solid black;
+}
+.event-time {
+	float: right;
+	display: inline-block;
+}
+.event-time .hour,
+.event-time .minute,
+.event-time .type {
+	font-family: "MontserratRegular";
+	display: block;
+}
+.event-time .hour {
+	font-size: 40px;
+	color: #F5BD5C;
+	margin-right: 10px;
+	line-height: 30px;
+}
+.event-time .minute {
+	font-size: 20px;
+	color: #F5BD5C;
+	line-height: 20px;
+}
+.event-time .type {
+	line-height: 20px;
+	font-size: 16px;
+	color: #A6AAB4;
+	text-transform: uppercase;
+}
+.clear {
+	clear: both;
+}

@@ -1,0 +1,17 @@
+AddDefaultCharset UTF-8
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule category-([A-Za-z0-9-]+)\.html$ category.php?url=$1 [NC,L]
+RewriteRule product-([A-Za-z0-9-]+)\.html$ product.php?url=$1 [NC,L]
+RewriteRule news-([A-Za-z0-9-]+)\.html$ news.php?url=$1 [NC,L]
+RewriteRule ^([A-Za-z0-9-]+)\.html$ index.php?url=$1 [NC,L]
+
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag  log_errors on
+php_value error_log  /home/path/public_html/domain/PHP_errors.log
